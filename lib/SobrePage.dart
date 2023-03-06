@@ -36,7 +36,7 @@ class _SobrePageState extends State<SobrePage> {
           Padding(
             padding: EdgeInsets.all(8.0),
             child: Text(
-              ' A Calculadora de Matrizes foi criada com o objetivo de trazer a facilidade da cola na hora da prova para a palma da sua mão. Com ela você pode obter a resposta da sua questão sobre matrizes de maneira rápida e discreta!\nDesenvolvido por: Jhonnata Carvalho.\nCurso: Sistemas De Informação.\nDisciplina: Álgebra Linear.\nProfessor: Rafael Barbosa da Silva',
+              ' A Calculadora de Matrizes foi criada com o objetivo de trazer a facilidade da cola na hora da prova para a palma da sua mão. Com ela você pode obter a resposta da sua questão sobre matrizes de maneira rápida! \nDesenvolvido por: Jhonnata Carvalho.\nCurso: Sistemas De Informação.\nDisciplina: Álgebra Linear.\nProfessor: Rafael Barbosa da Silva',
               style: TextStyle(
                 color: Colors.black87,
                 fontSize: 17,
