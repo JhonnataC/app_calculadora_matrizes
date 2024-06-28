@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SobrePage extends StatefulWidget {
-  const SobrePage({super.key});
+class InfoScreen extends StatefulWidget {
+  const InfoScreen({super.key});
 
   @override
-  State<SobrePage> createState() => _SobrePageState();
+  State<InfoScreen> createState() => _InfoScreenState();
 }
 
-class _SobrePageState extends State<SobrePage> {
+class _InfoScreenState extends State<InfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,8 +21,8 @@ class _SobrePageState extends State<SobrePage> {
         ],
         title: const Text('Sobre'),
       ),
-      body: Column(
-        children: const [
+      body: const Column(
+        children: [
           Text(
             '\nSeja Bem-Vindo à Calculadora de Matrizes',
             style: TextStyle(

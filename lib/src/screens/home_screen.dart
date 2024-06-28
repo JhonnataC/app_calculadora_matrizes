@@ -1,25 +1,24 @@
-import 'package:app_calculadora_matrizes/CalculatePage.dart';
+import 'package:app_calculadora_matrizes/src/screens/calculate_screen.dart';
 import 'package:flutter/material.dart';
+import 'info_screen.dart';
 
-import 'SobrePage.dart';
-
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeScreenState extends State<HomeScreen> {
   int _currentPageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     Widget page;
     if (_currentPageIndex == 0) {
-      page = const CalculatePage();
+      page = const CalculatorScreen();
     } else if (_currentPageIndex == 1) {
-      page = const SobrePage();
+      page = const InfoScreen();
     } else {
       throw UnimplementedError('no widget for $_currentPageIndex');
     }

@@ -1,31 +1,21 @@
 import 'package:flutter/material.dart';
-import 'Matriz.dart';
+import '../controllers/matriz.dart';
 
-class ResultPage extends StatefulWidget {
-  const ResultPage({super.key});
+class ResultScreen extends StatefulWidget {
+  const ResultScreen({super.key});
 
   @override
-  State<ResultPage> createState() => _ResultPageState();
+  State<ResultScreen> createState() => _ResultScreenState();
 }
 
-class _ResultPageState extends State<ResultPage> {
+class _ResultScreenState extends State<ResultScreen> {
   late List<List<double>> matrizEscalonada;
-  late double widthBox;
 
   @override
   Widget build(BuildContext context) {
     matrizEscalonada = Matriz.escalonarMatriz(
       Matriz.criarMatrizDosInputs(Matriz.matrizEstatica.dimensao),
     );
-
-    if (matrizEscalonada[0].length < 10) {
-      widthBox = 30;
-    } else if (matrizEscalonada[0].length >= 10 &&
-        matrizEscalonada[0].length < 20) {
-      widthBox = 20;
-    } else if (matrizEscalonada[0].length >= 20) {
-      widthBox = 15;
-    }
 
     return Scaffold(
       appBar: AppBar(
@@ -54,8 +44,8 @@ class _ResultPageState extends State<ResultPage> {
                         Column(
                           children: [
                             SizedBox(
-                              width: widthBox,
-                              height: 40,
+                              width: 35,
+                              height: 35,
                               child: Text(
                                 matrizEscalonada[i][j].toStringAsFixed(1),
                                 style: const TextStyle(

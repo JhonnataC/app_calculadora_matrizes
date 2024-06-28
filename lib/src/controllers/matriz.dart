@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class Matriz {
   List<List<double>> dimensao = [];
@@ -22,7 +23,7 @@ class Matriz {
     _criarListaInputsControllers(numLinhas, numColunas);
   }
 
-  // Com a matriz de controllers já montada, agora adiciona aos controllers um TextEditingController() próprio
+  // Com a matriz de controllers já montada, agora inicia eles
   void _criarListaInputsControllers(int numLinhas, int numColunas) {
     for (int i = 0; i < numLinhas; i++) {
       for (int j = 0; j < numColunas; j++) {
@@ -65,17 +66,31 @@ class Matriz {
       children: [
         for (int i = 0; i < numLinhas; i++)
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               for (int j = 0; j < numColunas; j++)
                 Column(
                   children: [
-                    SizedBox(
-                      width: widthBox,
-                      height: 40,
-                      child: TextField(
-                        controller: matriz.listaInputsControllers[i][j],
-                        keyboardType: const TextInputType.numberWithOptions(),
+                    Padding(
+                      padding: const EdgeInsets.all(1),
+                      child: SizedBox(
+                        width: 45,
+                        height: 45,
+                        child: TextField(
+                          controller: matriz.listaInputsControllers[i][j],
+                          maxLength: 2,
+                          keyboardType: TextInputType.number,
+                          inputFormatters: [
+                            FilteringTextInputFormatter.digitsOnly,
+                          ],
+                          textInputAction: TextInputAction.next,
+                          style: const TextStyle(
+                              fontSize: 15, color: Colors.black),
+                          decoration: const InputDecoration(
+                            border: OutlineInputBorder(),
+                            counterText: '',
+                          ),
+                        ),
                       ),
                     ),
                   ],
