@@ -1,16 +1,13 @@
-# app_calculadora_matrizes
+# Calculadora de Matrizes
 
-A new Flutter project.
+O primeiro projeto que fiz em Flutter, um aplicativo que escalona matrizes que usei na faculdade.
 
-## Getting Started
+### Detalhes
 
-This project is a starting point for a Flutter application.
+Como foi o primeiro contato que tive com Flutter, serviu bem para conhecer como a construção de telas funcionava.
 
-A few resources to get you started if this is your first Flutter project:
+<div align="center">
+  <img src="https://github.com/JhonnataC/app_calculadora_matrizes/assets/110948814/6cd14a63-0565-43b7-86d7-d5f866e3cb21" width="300px" />
+  <img src="https://github.com/JhonnataC/app_calculadora_matrizes/assets/110948814/2855eab6-e4bb-41fc-9523-0a9b6fdbc96a" width="300px" />
+</div>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
